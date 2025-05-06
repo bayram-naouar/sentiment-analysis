@@ -1,0 +1,10 @@
+transformers==4.40.0
+datasets
+torch
+scikit-learn
+seaborn
+matplotlib
+pandas
+numpy
+tqdm
+nltk
