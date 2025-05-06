@@ -1,13 +1,13 @@
 
 # Sentiment Analysis Project
 
-This project is focused on sentiment analysis using a variety of Natural Language Processing (NLP) models. It includes classical machine learning models, such as Logistic Regression and SVM, as well as deep learning models like LSTM and BERT-based architectures. The goal is to classify text data into positive and negative sentiment categories, with the flexibility to customize and tune hyperparameters.
+This project is focused on sentiment analysis using a variety of Natural Language Processing (NLP) models. It includes classical machine learning models, such as Logistic Regression, SVM and Random Forest, as well as a deep learning model (BERT-based architecture). The goal is to classify text data into positive and negative sentiment categories, with the flexibility to customize and tune hyperparameters.
 
 ## Features
 
 - **Preprocessing**: Custom preprocessing pipeline for text data, including tokenization, stopword removal, and vectorization.
 - **Classical Models**: Implementation of models like Logistic Regression, SVM, etc.
-- **Deep Learning Models**: LSTM and BERT-based models, including DistilBERT.
+- **Deep Learning Models**: BERT-based models, including DistilBERT.
 - **Hyperparameter Tuning**: Grid search for hyperparameter optimization of classical models.
 - **Evaluation**: Evaluation metrics such as accuracy, precision, recall, and F1-score.
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
    - On Windows:
      ```bash
-     .\.venv\Scriptsctivate
+     .\.venv\Scripts\Activate.ps1
      ```
    - On macOS/Linux:
      ```bash
@@ -61,11 +61,10 @@ pip install -r requirements.txt
 
 3. **Grid Search for Hyperparameter Tuning**:
 
-   The classical models (e.g., Logistic Regression, SVM) use hyperparameter tuning through grid search. If you wish to use a different grid of hyperparameters, simply create a new JSON file in the `param_grids/` directory, using the following structure:
+   The classical models (e.g., Logistic Regression, SVM) use hyperparameter tuning through grid search. If you wish to use a different grid of hyperparameters, simply create a new JSON file in the `param_grids/` directory called <model_name>_param_grid.json, using the following structure:
 
    ```json
    {
-     "model_name": {
        "param1": [value1, value2, ...],
        "param2": [value1, value2, ...],
        ...
@@ -73,7 +72,7 @@ pip install -r requirements.txt
    }
    ```
 
-   Replace `model_name` with the specific model (e.g., "logistic_regression", "svm") and add the parameters you want to tune with their possible values. The grid search will automatically use these parameters during the training phase.
+   Replace <model_name> with the specific model ("logregr", "svm", 'rf') and add the parameters you want to tune with their possible values. The grid search will automatically use these parameters during the training phase.
 
 4. **Models**:
 
