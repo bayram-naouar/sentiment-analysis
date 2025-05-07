@@ -1,5 +1,5 @@
 
-# Sentiment Analysis Project
+# 🗣️ Sentiment Analysis Project
 
 This project is focused on sentiment analysis using a variety of Natural Language Processing (NLP) models. It includes classical machine learning models, such as Logistic Regression, SVM and Random Forest, as well as a deep learning model (BERT-based architecture). The goal is to classify text data into positive and negative sentiment categories, with the flexibility to customize and tune hyperparameters.
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## How to Use
 
-1. **Set Up Environment**:
+1. ⚙️ **Set Up Environment**:
    Ensure that you have a Python virtual environment set up. If not, you can create one using:
 
    ```bash
@@ -49,7 +49,7 @@ pip install -r requirements.txt
      source .venv/bin/activate
      ```
 
-2. **Run the Sentiment Analysis**:
+2. 👟 **Run the Sentiment Analysis**:
 
    To run the sentiment analysis pipeline, execute the `main.py` file:
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
    This will preprocess the dataset, train the models, and evaluate the performance.
 
-3. **Grid Search for Hyperparameter Tuning**:
+3. 🔎 **Grid Search for Hyperparameter Tuning**:
 
    The classical models (e.g., Logistic Regression, SVM) use hyperparameter tuning through grid search. If you wish to use a different grid of hyperparameters, simply create a new JSON file in the `param_grids/` directory called <model_name>_param_grid.json, using the following structure:
 
@@ -74,12 +74,12 @@ pip install -r requirements.txt
 
    Replace <model_name> with the specific model ("logregr", "svm", 'rf') and add the parameters you want to tune with their possible values. The grid search will automatically use these parameters during the training phase.
 
-4. **Models**:
+4. 📰 **Models**:
 
    - The `models/` folder contains the saved models after training. They are saved in `.joblib` format for the classical models and the deep learning models are saved using `transformers` and `torch`.
    - You can load these models using the respective libraries for inference or further training.
 
-## Folder Structure
+## 📂 Folder Structure
 
 - **data/**: Contains raw and processed datasets.
 - **notebooks/**: Jupyter notebooks for each stage of the project (preprocessing, classical models, LSTM, BERT).
@@ -91,6 +91,6 @@ pip install -r requirements.txt
 - **README.md**: This file.
 - **requirements.txt**: List of required Python packages.
 
-## License
+## 🔑 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
